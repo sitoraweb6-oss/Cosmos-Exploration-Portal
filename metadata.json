@@ -1,0 +1,6 @@
+{
+  "name": "Cosmos Exploration Portal",
+  "description": "An immersive, cinematic sci-fi editorial platform exploring deep space missions, cosmic timelines, and stellar archives with interactive telemetry logs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

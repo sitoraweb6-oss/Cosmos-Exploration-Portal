@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="avatarBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#111B2C" />
+      <stop offset="100%" stop-color="#070B16" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="url(#avatarBg)" rx="20" />
+  <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(18,230,242,0.1)" stroke-width="1.5" />
+  
+  <g transform="translate(100, 80)">
+    <!-- Helmet / Suit Silhouette -->
+    <path d="M 10,240 C 20,150 180,150 190,240 Z" fill="#141C2D" stroke="#374760" stroke-width="2" />
+    <!-- Helmet Dome Outer -->
+    <circle cx="100" cy="110" r="75" fill="#0A0F1A" stroke="#9A5CFF" stroke-width="3" />
+    
+    <!-- Visor Area with heavy gradient and crosshair -->
+    <path d="M 35,110 Q 100,55 165,110 Q 100,165 35,110 Z" fill="#040710" stroke="#12E6F2" stroke-width="2.5" />
+    
+    <!-- Crosshair indicator on visor -->
+    <path d="M 90,110 L 110,110 M 100,100 L 100,120" stroke="#12E6F2" stroke-width="2" filter="url(#glow)" />
+    <!-- Dynamic sweep scanning arc -->
+    <path d="M 60,115 A 40,40 0 0 1 140,115" fill="none" stroke="#9A5CFF" stroke-width="1.5" stroke-dasharray="3,1" />
+  </g>
+  <text x="200" y="360" text-anchor="middle" fill="#A3A9B7" font-family="monospace" font-size="10" letter-spacing="2">MAP_ENG. SOl // CHRONOS</text>
+</svg>

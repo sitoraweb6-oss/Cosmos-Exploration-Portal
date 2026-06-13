@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0F1523" />
+      <stop offset="100%" stop-color="#070B16" />
+    </radialGradient>
+    <radialGradient id="cloudGlowOne" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#9A5CFF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#9A5CFF" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="cloudGlowTwo" cx="70%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#12E6F2" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#12E6F2" stop-opacity="0" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="600" height="400" fill="url(#spaceBg)" />
+  
+  <!-- Glowing dust cloud blends -->
+  <circle cx="220" cy="180" r="160" fill="url(#cloudGlowOne)" />
+  <circle cx="380" cy="220" r="150" fill="url(#cloudGlowTwo)" />
+  
+  <!-- Crystalline fragments geometric particles -->
+  <g stroke="#ffffff" stroke-opacity="0.2" fill="none">
+    <polygon points="280,140 310,120 330,150 290,170" stroke="#12E6F2" stroke-width="1.5" />
+    <polygon points="340,240 380,210 390,260 360,280" stroke="#9A5CFF" stroke-width="1.5" />
+    <polygon points="180,220 210,190 230,230 190,250" stroke="#12E6F2" stroke-width="1" />
+  </g>
+
+  <!-- Star Field Points -->
+  <g fill="#ffffff">
+    <circle cx="120" cy="90" r="1.5" opacity="0.8" />
+    <circle cx="480" cy="110" r="2" opacity="0.6" />
+    <circle cx="150" cy="280" r="1" opacity="0.9" />
+    <circle cx="510" cy="290" r="1.5" opacity="0.7" />
+  </g>
+
+  <!-- HUD overlay -->
+  <path d="M 20,380 L 120,380 M 20,380 L 20,350" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+  <text x="35" y="370" fill="rgba(255,255,255,0.3)" font-family="monospace" font-size="8" letter-spacing="2">LUMINOSITY_STAGE // HIGH</text>
+</svg>

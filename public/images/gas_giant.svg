@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0F1523" />
+      <stop offset="100%" stop-color="#070B16" />
+    </radialGradient>
+    <linearGradient id="planetBands" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2F1C5A" />
+      <stop offset="25%" stop-color="#9A5CFF" />
+      <stop offset="50%" stop-color="#143A52" />
+      <stop offset="75%" stop-color="#12E6F2" />
+      <stop offset="100%" stop-color="#0A1832" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="400" fill="url(#spaceBg)" />
+
+  <g transform="translate(300, 200)">
+    <!-- Gas Giant Planet Ball -->
+    <circle cx="0" cy="0" r="110" fill="url(#planetBands)" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+    
+    <!-- Outer electromagnetic aura loops -->
+    <ellipse cx="0" cy="0" rx="180" ry="15" fill="none" stroke="#12E6F2" stroke-width="1.5" stroke-dasharray="8,8" opacity="0.5" filter="url(#glow)" transform="rotate(-10)" />
+    <ellipse cx="0" cy="0" rx="200" ry="25" fill="none" stroke="#9A5CFF" stroke-width="2" opacity="0.3" transform="rotate(-10)" />
+    
+    <!-- Giant planet shadow overlay for 3D realism -->
+    <path d="M -110,0 A 110,110 0 0 0 110,0 A 110,110 0 0 1 -110,0" fill="#000000" opacity="0.55" transform="rotate(35)" />
+  </g>
+  
+  <text x="500" y="40" fill="#12E6F2" font-family="monospace" font-size="8" letter-spacing="1">GIANT // CENTAURI-B</text>
+</svg>

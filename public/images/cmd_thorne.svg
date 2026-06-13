@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="avatarBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#191330" />
+      <stop offset="100%" stop-color="#0A0F1D" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="400" fill="url(#avatarBg)" rx="20" />
+  <circle cx="200" cy="200" r="130" fill="none" stroke="rgba(154,92,255,0.15)" stroke-width="1.5" />
+  
+  <g transform="translate(100, 80)">
+    <!-- Helmet / Suit Silhouette -->
+    <path d="M 10,240 C 20,150 180,150 190,240 Z" fill="#23193E" stroke="#5E4F8A" stroke-width="2" />
+    <!-- Helmet Dome Outer -->
+    <circle cx="100" cy="110" r="75" fill="#0C081F" stroke="#12E6F2" stroke-width="3" />
+    
+    <!-- Visor Area with violet light bounce -->
+    <path d="M 40,110 Q 100,60 160,110 Q 100,165 40,110 Z" fill="#050505" stroke="#9A5CFF" stroke-width="2" />
+    
+    <!-- Coordinate graphs on visor -->
+    <circle cx="100" cy="110" r="15" fill="none" stroke="#9A5CFF" stroke-width="1" stroke-dasharray="3,3" />
+    <line x1="80" y1="110" x2="120" y2="110" stroke="#9A5CFF" stroke-width="1.5" />
+    <line x1="100" y1="90" x2="100" y2="130" stroke="#9A5CFF" stroke-width="1.5" />
+    <circle cx="108" cy="102" r="3" fill="#12E6F2" filter="url(#glow)" />
+  </g>
+  <text x="200" y="360" text-anchor="middle" fill="#A3A9B7" font-family="monospace" font-size="10" letter-spacing="2">CMD. ThOrNe // RADIOLIST</text>
+</svg>
